@@ -77,44 +77,35 @@ The architecture of this application leverages Spring Boot for microservices and
   ```http
   GET /question/allQuestions
 Get questions by category:
-http
-
 GET /question/category/{category}
+
 Add a new question:
-http
-
 POST /question/add
+
 Edit a question:
-http
-
 POST /question/edit/{id}
-Delete a question:
-http
 
+Delete a question:
 DELETE /question/delete/{id}
+
 Quiz Service
 Create a quiz:
-http
-
 POST /quiz/create
+
 Get quiz questions:
-http
-
 GET /quiz/get/{id}
-Submit quiz:
-http
 
+Submit quiz:
 POST /quiz/submit/{id}
+
 API Gateway
 The API Gateway routes requests to the appropriate microservices.
 
 Route to Quiz Service:
-http
-
 http://localhost:8084/QUIZ-SERVICE/quiz/get/{id}
-Route to Question Service:
-http
 
+Route to Question Service:
 http://localhost:8084/QUESTION-SERVICE/question/allQuestions
+
 Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or new features.
